@@ -1,0 +1,419 @@
+/* ===== Custom Icarus Theme Colors ===== */
+
+:root {
+    /* Primary - 柔和蓝紫色 */
+    --primary-h: 220;
+    --primary-s: 10%;
+    --primary-l: 40%;
+    --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+
+    /* Link color */
+    --link-h: 220;
+    --link-s: 15%;
+    --link-l: 40%;
+
+    /* Background */
+    --bg-h: 220;
+    --bg-s: 15%;
+    --bg-l: 94%;
+
+    /* Card */
+    --card-bg: #ffffff;
+    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    /* Text */
+    --text-strong: #2c3e50;
+    --text: #4a5568;
+    --text-light: #718096;
+
+    /* Borders */
+    --border: #e2e8f0;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: linear-gradient(135deg, #1e3a5f 0%, #162d50 100%) !important;
+    box-shadow: 0 2px 12px rgba(22, 45, 80, 0.2);
+}
+
+.navbar .navbar-menu .navbar-start .navbar-item,
+.navbar .navbar-menu .navbar-end .navbar-item {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.navbar .navbar-menu .navbar-start .navbar-item:hover,
+.navbar .navbar-menu .navbar-end .navbar-item:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 6px;
+}
+
+.navbar .navbar-brand .navbar-item {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+/* Replace logo image with text */
+.navbar-logo img {
+    display: none !important;
+}
+.navbar-logo::after {
+    content: "stan's blog";
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* ===== Body Background ===== */
+body {
+    background: hsl(var(--bg-h), var(--bg-s), var(--bg-l));
+}
+
+/* ===== Cards ===== */
+.card {
+    border-radius: 12px !important;
+    box-shadow: var(--card-shadow) !important;
+    border: 1px solid var(--border);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card .card-content {
+    padding: 2rem;
+}
+
+/* ===== Article Content ===== */
+.content h1 {
+    color: var(--text-strong);
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 3px solid #9ca3af;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content h2 {
+    color: var(--text-strong);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid #6b7280;
+}
+
+.content h3 {
+    color: var(--text-strong);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+.content h4 {
+    color: #4a5568;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.content p {
+    line-height: 1.85;
+    color: var(--text);
+}
+
+.content a {
+    color: hsl(var(--link-h), var(--link-s), var(--link-l));
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.content a:hover {
+    border-bottom-color: hsl(var(--link-h), var(--link-s), var(--link-l));
+}
+
+.content blockquote {
+    background: #f7f8fc;
+    border-left: 4px solid #9ca3af;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    color: #555;
+    margin: 1.5rem 0;
+}
+
+.content blockquote p {
+    margin: 0;
+}
+
+.content code {
+    background: #eef0f7;
+    color: #d63384;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.content pre {
+    background: #282c34 !important;
+    border-radius: 10px !important;
+    padding: 1.25rem !important;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content pre code {
+    background: transparent;
+    color: #abb2bf;
+    padding: 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.content ul, .content ol {
+    margin-left: 1.25rem;
+}
+
+.content li {
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.content strong {
+    color: var(--text-strong);
+    font-weight: 700;
+}
+
+/* ===== Post Date & Meta ===== */
+.article-meta {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* ===== Tags ===== */
+.article-tags a,
+.tag:not(body) {
+    background: #e5e7eb !important;
+    color: #4b5563 !important;
+    border-radius: 6px !important;
+    padding: 0.2em 0.6em;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.article-tags a:hover,
+.tag:not(body):hover {
+    background: #6b7280 !important;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+/* ===== Widget Cards in Sidebar ===== */
+.widget .card-content {
+    padding: 1.25rem;
+}
+
+.widget .menu-label {
+    color: var(--text-strong);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.widget .menu-list a {
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    transition: all 0.2s;
+}
+
+.widget .menu-list a:hover {
+    background: #eef0f7;
+}
+
+/* Categories widget - teal */
+[data-type="categories"].card .card-content {
+    background: #5c8a8a !important;
+    border-top: 3px solid #4a7060;
+}
+[data-type="categories"].card .menu-label,
+[data-type="categories"].card .menu-list a {
+    color: #fff !important;
+}
+[data-type="categories"].card .menu-list a:hover {
+    color: #222 !important;
+    background: rgba(255,255,255,0.3) !important;
+}
+
+/* Recent posts widget - slate blue */
+[data-type="recent-posts"].card .card-content {
+    background: #5a7d9a !important;
+    border-top: 3px solid #486580;
+}
+[data-type="recent-posts"].card .menu-label,
+[data-type="recent-posts"].card .title a,
+[data-type="recent-posts"].card .date,
+[data-type="recent-posts"].card .categories a {
+    color: #fff !important;
+}
+[data-type="recent-posts"].card .title a:hover,
+[data-type="recent-posts"].card .categories a:hover {
+    color: #222 !important;
+}
+
+/* Archives widget - muted plum */
+[data-type="archives"].card .card-content {
+    background: #7d6b91 !important;
+    border-top: 3px solid #655578;
+}
+[data-type="archives"].card .menu-label,
+[data-type="archives"].card .menu-list a {
+    color: #fff !important;
+}
+[data-type="archives"].card .menu-list a:hover {
+    color: #222 !important;
+    background: rgba(255,255,255,0.3) !important;
+}
+
+/* ===== Homepage: clean title cards, no excerpts ===== */
+body.home-page .card-content.article .content {
+    display: none !important;
+}
+
+body.home-page .card-content.article .article-meta {
+    margin-bottom: 0;
+    font-size: 0.75rem;
+}
+
+body.home-page .card-content.article .article-more {
+    display: none !important;
+}
+
+body.home-page .card {
+    margin-bottom: 0.75rem;
+}
+
+body.home-page .card-content.article {
+    padding: 1rem 1.5rem !important;
+}
+
+/* ===== Post page: hide non-TOC sidebar widgets ===== */
+body.post-page [data-type="profile"].card,
+body.post-page [data-type="categories"].card,
+body.post-page [data-type="recent-posts"].card,
+body.post-page [data-type="archives"].card {
+    display: none !important;
+}
+
+/* Post page: narrower sidebar, wider content */
+@media screen and (min-width: 769px) {
+    body.post-page .column-main {
+        flex: none;
+        width: 80% !important;
+    }
+    body.post-page .column-left {
+        flex: none;
+        width: 20% !important;
+    }
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+}
+
+/* ===== Profile Widget ===== */
+[data-type="profile"].card .card-content {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+[data-type="profile"].card .avatar {
+    border-radius: 50%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+[data-type="profile"].card .title {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+[data-type="profile"].card .heading {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+[data-type="profile"].card .level-item.has-text-centered .title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+[data-type="profile"].card .button.is-transparent {
+    color: rgba(255, 255, 255, 0.85);
+    transition: all 0.2s;
+}
+
+[data-type="profile"].card .button.is-transparent:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* GitHub button: add text after icon */
+[data-type="profile"].card a[title="Github"] .fab.fa-github::after {
+    content: " GitHub";
+    font-family: Ubuntu, sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* ===== License Block ===== */
+.article-licensing {
+    background: #f8f9fc;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+/* ===== Post Navigation ===== */
+.post-navigation a {
+    color: hsl(230, 45%, 55%);
+    font-weight: 500;
+}
+
+/* ===== Buttons ===== */
+.button.is-small {
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ===== Responsive tweaks ===== */
+@media screen and (max-width: 768px) {
+    .card .card-content {
+        padding: 1.25rem;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.25rem;
+    }
+}

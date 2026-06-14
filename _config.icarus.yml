@@ -1,0 +1,193 @@
+# Version of the configuration file
+version: 5.1.0
+# Icarus theme variant, can be "default" or "cyberpunk"
+variant: default
+# Path or URL to the website's logo
+logo: /img/logo.svg
+# Page metadata configurations
+head:
+    # URL or path to the website's icon
+    favicon: /img/favicon.svg
+    # Web application manifests configuration
+    manifest:
+        name:
+        short_name:
+        start_url:
+        theme_color:
+        background_color:
+        display: standalone
+        icons:
+            -
+                src: ''
+                sizes: ''
+                type:
+    # Open Graph metadata
+    open_graph:
+        title:
+        type: blog
+        url:
+        image:
+        site_name:
+        author:
+        description:
+        twitter_card:
+        twitter_id:
+        twitter_site:
+        google_plus:
+        fb_admins:
+        fb_app_id:
+    # Structured data of the page
+    structured_data:
+        title:
+        description:
+        url:
+        author:
+        publisher:
+        publisher_logo:
+        image:
+    # Additional HTML meta tags in an array
+    meta:
+        - ''
+    # URL or path to the website's RSS atom.xml
+    rss:
+# Page top navigation bar configurations
+navbar:
+    # Navigation menu items
+    menu:
+        Home: /
+        Archives: /archives
+        Categories: /categories
+    # Links to be shown on the right of the navigation bar
+    links:
+# Page footer configurations
+footer:
+    # Copyright text
+    copyright: © 2025 stan
+    # Links to be shown on the right of the footer section
+    links:
+# Enable table of contents on post pages
+toc: true
+# Article related configurations
+article:
+    # Code highlight settings
+    highlight:
+        theme: atom-one-dark
+        clipboard: true
+        fold: unfolded
+    # Whether to show estimated article reading time
+    readtime: true
+    # Whether to show updated time
+    update_time: true
+    # Article licensing block
+    licenses:
+        Creative Commons:
+            icon: fab fa-creative-commons
+            url: https://creativecommons.org/
+        Attribution:
+            icon: fab fa-creative-commons-by
+            url: https://creativecommons.org/licenses/by/4.0/
+        Noncommercial:
+            icon: fab fa-creative-commons-nc
+            url: https://creativecommons.org/licenses/by-nc/4.0/
+# Search plugin configurations
+search:
+    type: insight
+    index_pages: true
+# Sidebar configurations.
+sidebar:
+    left:
+        sticky: false
+    right:
+        sticky: false
+# Sidebar widget configurations
+widgets:
+    # Profile widget configurations
+    -
+        position: left
+        type: profile
+        author: stan
+        author_title:
+        location:
+        avatar:
+        avatar_rounded: false
+        gravatar:
+        follow_link:
+        social_links:
+            Github:
+                icon: fab fa-github
+                url: https://github.com/shanjiawei1031/
+    # Table of contents widget configurations
+    -
+        position: left
+        type: toc
+        index: true
+        collapsed: true
+        depth: 3
+    # Categories widget configurations
+    -
+        position: left
+        type: categories
+    # Recent posts widget configurations
+    -
+        position: left
+        type: recent_posts
+    # Archives widget configurations
+    -
+        position: left
+        type: archives
+        format: 'YYYY-MM'
+# Plugin configurations
+plugins:
+    # Enable page startup animations
+    animejs: true
+    # Show the "back to top" button
+    back_to_top: true
+    # Baidu Analytics plugin settings
+    baidu_analytics:
+        tracking_id:
+    # Bing Webmaster Tools plugin settings
+    bing_webmaster:
+        tracking_id:
+    # BuSuanZi site/page view counter
+    busuanzi: false
+    # CNZZ statistics
+    cnzz:
+        id:
+        web_id:
+    # Alerting users about the use of cookies
+    cookie_consent:
+        type: info
+        theme: edgeless
+        static: false
+        position: bottom-left
+        policyLink: https://www.cookiesandyou.com/
+    # Enable the lightGallery and Justified Gallery plugins
+    gallery: true
+    # Google Analytics plugin settings
+    google_analytics:
+        tracking_id:
+    # Hotjar user feedback plugin
+    hotjar:
+        site_id:
+    # Enable the KaTeX math typesetting support
+    katex: false
+    # Enable the MathJax math typesetting support
+    mathjax: false
+    # Enable the Outdated Browser plugin
+    outdated_browser: false
+    # Enable PJAX
+    pjax: true
+    # Show a progress bar at top of the page on page loading
+    progressbar: true
+    # Statcounter statistics
+    statcounter:
+        project:
+        security:
+    # Twitter conversion tracking plugin settings
+    twitter_conversion_tracking:
+        pixel_id:
+# CDN provider settings
+providers:
+    cdn: jsdelivr
+    fontcdn: google
+    iconcdn: fontawesome
